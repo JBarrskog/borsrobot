@@ -1,4 +1,4 @@
-"""Unit tests."""
+"""Unit tests of the moving_average-module."""
 import unittest
 
 import pandas as pd
@@ -8,7 +8,7 @@ import moving_average
 
 
 class TestMovingAverage(unittest.TestCase):
-    """Testing the moving_average-module."""
+    """Testing the simple moving average method."""
 
     def setUp(self):
         """Set up general settings for the unit tests."""
@@ -66,7 +66,7 @@ class TestMovingAverage(unittest.TestCase):
 
     def test_name_of_new_column(self):
         """Testing that the returned data has the correct header."""
-        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')[::-1]
+        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')
         data = np.random.randint(1, high=100, size=len(days))
         data_frame = pd.DataFrame({'days': days, 'col2': data})
         data_frame = data_frame.set_index('days')
@@ -89,7 +89,7 @@ class TestMovingAverage(unittest.TestCase):
 
     def test_window(self):
         """Testing different kinds of windows."""
-        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')[::-1]
+        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')
         data = np.random.randint(1, high=100, size=len(days))
         data_frame = pd.DataFrame({'days': days, 'col2': data})
         data_frame = data_frame.set_index('days')
@@ -120,7 +120,7 @@ class TestMovingAverage(unittest.TestCase):
 
     def test_data_column(self):
         """Testing different kinds of data_column."""
-        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')[::-1]
+        days = pd.date_range('2018-01-10', '2018-01-19', freq='D')
         data = np.random.randint(1, high=100, size=len(days))
         data_frame = pd.DataFrame({'days': days, 'col2': data})
         data_frame = data_frame.set_index('days')

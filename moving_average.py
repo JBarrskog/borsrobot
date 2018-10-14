@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def simple_moving_average(data_frame, data_column, window):
-    """Take the Sliding Moving Average of the pandas dataframe."""
+    """Take the Simple Moving Average of the pandas dataframe."""
     # Checking data_frame
     if not isinstance(data_frame, pd.DataFrame):
         raise TypeError("The data_frame has to be a pandas.DataFrame.")
