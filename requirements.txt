@@ -24,3 +24,4 @@ scipy==1.1.0
 six==1.11.0
 snowballstemmer==1.2.1
 wrapt==1.10.11
+xlrd==1.1.0

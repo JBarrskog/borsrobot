@@ -68,7 +68,6 @@ class TestMovingAverage(unittest.TestCase):
 
     def test_name_of_new_column(self):
         """Testing that the returned data has the correct header."""
-
         answer = ['col2']
         for window in range(1, 9):
             self.data_frame = moving_average.simple_moving_average(
